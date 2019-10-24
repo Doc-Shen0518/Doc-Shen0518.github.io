@@ -151,6 +151,87 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-第七章第二节课程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/24/%E7%AC%AC%E4%B8%83%E7%AB%A0%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE%E7%A8%8B/">第七章第二节课程</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/24/%E7%AC%AC%E4%B8%83%E7%AB%A0%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE%E7%A8%8B/" class="archive-article-date">
+  	<time datetime="2019-10-24T10:19:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>/*<br> Navicat Premium Data Transfer</p>
+<p> Source Server         : 虚拟机55.4-测试<br> Source Server Type    : MySQL<br> Source Server Version : 50646<br> Source Host           : 10.211.55.4:3306<br> Source Schema         : clazzz</p>
+<p> Target Server Type    : MySQL<br> Target Server Version : 50646<br> File Encoding         : 65001</p>
+<p> Date: 23/10/2019 09:34:43<br>*/</p>
+<p>SET NAMES utf8mb4;<br>SET FOREIGN_KEY_CHECKS = 0;</p>
+<hr>
+<p>– Table structure for score</p>
+<hr>
+<p>DROP TABLE IF EXISTS <code>score</code>;<br>CREATE TABLE <code>score</code> (<br>  <code>id</code> int(11) NOT NULL AUTO_INCREMENT,<br>  <code>NAME</code> varchar(20) DEFAULT NULL,<br>  <code>SUBJECT</code> varchar(20) DEFAULT NULL,<br>  <code>score</code> int(11) DEFAULT NULL,<br>  PRIMARY KEY (<code>id</code>)<br>) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;</p>
+<hr>
+<p>– Records of score</p>
+<hr>
+<p>BEGIN;<br>INSERT INTO <code>score</code> VALUES (1, ‘张三’, ‘语文’, 81);<br>INSERT INTO <code>score</code> VALUES (2, ‘张三’, ‘数学’, 75);<br>INSERT INTO <code>score</code> VALUES (3, ‘李四’, ‘语文’, 76);<br>INSERT INTO <code>score</code> VALUES (4, ‘李四’, ‘数学’, 90);<br>INSERT INTO <code>score</code> VALUES (5, ‘王五’, ‘语文’, 81);<br>INSERT INTO <code>score</code> VALUES (6, ‘王五’, ‘数学’, 100);<br>INSERT INTO <code>score</code> VALUES (7, ‘王五 ‘, ‘英语’, 90);<br>COMMIT;</p>
+<p>SET FOREIGN_KEY_CHECKS = 1;</p>
+<p>– 用一条 SQL 语句查询出每门课都大于 80 分的学生姓名<br>– 难点：每门课的分数 – 解决方案：把分数少于80分的进行排除</p>
+<p>– not in 字段<br>SELECT *<br>FROM score<br>WHERE NAME NOT IN (SELECT  NAME FROM score WHERE score&lt;=80)</p>
+<p>– not exists 字段<br>SELECT *<br>FROM score a<br>WHERE NOT EXISTS (SELECT * FROM score b WHERE a.name = b.name AND b.score &lt; 80) ;</p>
+<p>– all()方法<br>SELECT *<br>FROM score a<br>WHERE 80 &lt; ALL(SELECT score FROM score WHERE a.name = NAME );</p>
+<p>– any()方法<br>SELECT *<br>FROM score a<br>WHERE 80 &lt; any(SELECT score FROM score WHERE a.name = NAME );</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/24/%E7%AC%AC%E4%B8%83%E7%AB%A0%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE%E7%A8%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-分组查询" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
