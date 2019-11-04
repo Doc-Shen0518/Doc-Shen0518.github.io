@@ -6,16 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>第八章 MySQL索引和事务 | Hexo</title>
+  <title>Archives: 2019/11 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第八章：索引和事务1、索引    索引是对数据库中一列或多列的值进行排序的一种结构，和书籍的目录十分相似，使用索引可以提高数据库中特定数据的查询速度，但是会降低修改速度。2、事务和索引都是数据库的对象。3、事务    事务是一种机制，他包含了一组数据库的操作命令，而且将所有的命令作为一个整体一起向数据库提交或者撤销，这组命令要么都执行，要么都不执行，所以事务是一个不可分割的逻辑工作单元。在数据库系">
-<meta property="og:type" content="article">
-<meta property="og:title" content="第八章 MySQL索引和事务">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;25&#x2F;%E7%AC%AC%E5%85%AB%E7%AB%A0-MySQL%E7%B4%A2%E5%BC%95%E5%92%8C%E4%BA%8B%E5%8A%A1&#x2F;index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;11&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第八章：索引和事务1、索引    索引是对数据库中一列或多列的值进行排序的一种结构，和书籍的目录十分相似，使用索引可以提高数据库中特定数据的查询速度，但是会降低修改速度。2、事务和索引都是数据库的对象。3、事务    事务是一种机制，他包含了一组数据库的操作命令，而且将所有的命令作为一个整体一起向数据库提交或者撤销，这组命令要么都执行，要么都不执行，所以事务是一个不可分割的逻辑工作单元。在数据库系">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-25T01:36:57.350Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -152,165 +149,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-第八章-MySQL索引和事务" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      第八章 MySQL索引和事务
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/11/04/%E9%98%B2%E6%AD%A2%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" class="archive-article-date">
+  	<time datetime="2019-11-04T07:03:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/11/04/%E9%98%B2%E6%AD%A2%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">防止中文乱码</a>
     </h1>
   
 
-        
-        <a href="/2019/10/25/%E7%AC%AC%E5%85%AB%E7%AB%A0-MySQL%E7%B4%A2%E5%BC%95%E5%92%8C%E4%BA%8B%E5%8A%A1/" class="archive-article-date">
-  	<time datetime="2019-10-25T01:36:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>第八章：索引和事务<br>1、索引<br>    索引是对数据库中一列或多列的值进行排序的一种结构，和书籍的目录十分相似，使用索引可以提高数据库中特定数据的查询速度，但是会降低修改速度。<br>2、事务和索引都是数据库的对象。<br>3、事务<br>    事务是一种机制，他包含了一组数据库的操作命令，而且将所有的命令作为一个整体一起向数据库提交或者撤销，这组命令要么都执行，要么都不执行，所以事务是一个不可分割的逻辑工作单元。在数据库系统上执行并操作时，食物是作为最小的控制单元来使用的。<br>4、事务的特点<br>   (1)、原子性<br>    事务是一个完整性的操作，事务的各元素是不可分割的，要么全都成功执行，要么就撤销所有的操作，事务的单元不可能出现部分成功的情况。<br>   (2)、一致性<br>    事务完成的前后，数据必须保持完全一致的状态。即在事务开始前，数据库中存储的数据保持一致的状态。党事务完成时，数据也必须保持一致状态。事务不能使数据处于不稳定的状态。这样就保证了数据的一致性，不会出现改变了一部分数据即部分语句执行成功了，而另一部分由于出错而未执行的情况。<br>   (3)、隔离性<br>    事务是相对独立的，一个事务对数据进行修改时，其他事务是不能修改的。如果其他事务要访问这个事务操作的数据，要么在这个事务开始之前访问，要么在事务完成之后访问。当事务修改数据时，如果其他进程也正在使用相同的数据，则知道该事务成功提交之后，其他进程对数据的修改才能生效。隔离性是DBMS针对并发事务间的冲突提供的安全保证。<br>   (4)、持久性<br>   事务完成后，它对系统的影响是永久性的，即一个事务提交成功，DBMS保证它对数据库中数据的改变是永久性的，经受得住任何系统故障。持久性通过数据库备份和恢复来保证。持久性意味着当系统或介质发生故障时，确保已提交事务的更新不会丢失。<br>5、事务的隔离级别<br>    事务的4个特性中，隔离性用来解决多用户操作中的并发冲突问题。ISO SQL定义标准事务之间的隔离级别为：未提交读(READ UNCOTTED)、已提交读(READ COMMITTED)、重复读(REPEATABLEREAD)、可串行化(SERIALIZABLE)。</p>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/25/%E7%AC%AC%E5%85%AB%E7%AB%A0-MySQL%E7%B4%A2%E5%BC%95%E5%92%8C%E4%BA%8B%E5%8A%A1/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/11/04/%E9%98%B2%E6%AD%A2%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          防止中文乱码
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/10/24/%E7%AC%AC%E4%B8%83%E7%AB%A0%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第七章第二节课程</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -333,8 +214,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
