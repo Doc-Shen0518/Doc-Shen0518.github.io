@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>jdbc连接数据库 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+  <meta name="description" content="1、加载驱动2、获取连接3、编写SQL语句4、获取陈述对象5、执行SQL语句，获得结果6、释放结果集7、释放陈述对象8、释放连接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jdbc连接数据库">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;07&#x2F;jdbc%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、加载驱动2、获取连接3、编写SQL语句4、获取陈述对象5、执行SQL语句，获得结果6、释放结果集7、释放陈述对象8、释放连接">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-07T10:17:18.831Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -149,16 +152,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-jdbc连接数据库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-jdbc连接数据库" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/07/jdbc%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/">jdbc连接数据库</a>
+    <h1 class="article-title" itemprop="name">
+      jdbc连接数据库
     </h1>
   
 
@@ -176,6 +177,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -183,16 +205,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/07/jdbc%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/07/jdbc%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/04/%E9%98%B2%E6%AD%A2%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">防止中文乱码</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -212,541 +293,14 @@
 
 
 
-
   
-    <article id="post-防止中文乱码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/04/%E9%98%B2%E6%AD%A2%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">防止中文乱码</a>
-    </h1>
   
 
-        
-        <a href="/2019/11/04/%E9%98%B2%E6%AD%A2%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/" class="archive-article-date">
-  	<time datetime="2019-11-04T07:03:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、设置工作空间的编码格式。<br>       window-&gt;prepeences-&gt;workspace-&gt;utf-8<br>2、设置jsp文件的编码格式。<br>       window-&gt;prepeences-&gt;jspfile-&gt;utf-8<br>3、设置请求的编码格式。<br>       get:tomcat8.5（Tomcat 8以上）默认就是utf-8<br>       post:req.setCharacterEncoding(“utf-8”)<br>4、设置响应的编码格式。<br>       get:response.setContentType(“text/html;charset=utf-8”)<br>       post:resp.setCharacterEncoding(“utf-8”)</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/04/%E9%98%B2%E6%AD%A2%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-第八章-MySQL索引和事务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/25/%E7%AC%AC%E5%85%AB%E7%AB%A0-MySQL%E7%B4%A2%E5%BC%95%E5%92%8C%E4%BA%8B%E5%8A%A1/">第八章 MySQL索引和事务</a>
-    </h1>
   
 
-        
-        <a href="/2019/10/25/%E7%AC%AC%E5%85%AB%E7%AB%A0-MySQL%E7%B4%A2%E5%BC%95%E5%92%8C%E4%BA%8B%E5%8A%A1/" class="archive-article-date">
-  	<time datetime="2019-10-25T01:36:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>第八章：索引和事务<br>1、索引<br>    索引是对数据库中一列或多列的值进行排序的一种结构，和书籍的目录十分相似，使用索引可以提高数据库中特定数据的查询速度，但是会降低修改速度。<br>2、事务和索引都是数据库的对象。<br>3、事务<br>    事务是一种机制，他包含了一组数据库的操作命令，而且将所有的命令作为一个整体一起向数据库提交或者撤销，这组命令要么都执行，要么都不执行，所以事务是一个不可分割的逻辑工作单元。在数据库系统上执行并操作时，食物是作为最小的控制单元来使用的。<br>4、事务的特点<br>   (1)、原子性<br>    事务是一个完整性的操作，事务的各元素是不可分割的，要么全都成功执行，要么就撤销所有的操作，事务的单元不可能出现部分成功的情况。<br>   (2)、一致性<br>    事务完成的前后，数据必须保持完全一致的状态。即在事务开始前，数据库中存储的数据保持一致的状态。党事务完成时，数据也必须保持一致状态。事务不能使数据处于不稳定的状态。这样就保证了数据的一致性，不会出现改变了一部分数据即部分语句执行成功了，而另一部分由于出错而未执行的情况。<br>   (3)、隔离性<br>    事务是相对独立的，一个事务对数据进行修改时，其他事务是不能修改的。如果其他事务要访问这个事务操作的数据，要么在这个事务开始之前访问，要么在事务完成之后访问。当事务修改数据时，如果其他进程也正在使用相同的数据，则知道该事务成功提交之后，其他进程对数据的修改才能生效。隔离性是DBMS针对并发事务间的冲突提供的安全保证。<br>   (4)、持久性<br>   事务完成后，它对系统的影响是永久性的，即一个事务提交成功，DBMS保证它对数据库中数据的改变是永久性的，经受得住任何系统故障。持久性通过数据库备份和恢复来保证。持久性意味着当系统或介质发生故障时，确保已提交事务的更新不会丢失。<br>5、事务的隔离级别<br>    事务的4个特性中，隔离性用来解决多用户操作中的并发冲突问题。ISO SQL定义标准事务之间的隔离级别为：未提交读(READ UNCOTTED)、已提交读(READ COMMITTED)、重复读(REPEATABLEREAD)、可串行化(SERIALIZABLE)。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/25/%E7%AC%AC%E5%85%AB%E7%AB%A0-MySQL%E7%B4%A2%E5%BC%95%E5%92%8C%E4%BA%8B%E5%8A%A1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-第七章第二节课程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/24/%E7%AC%AC%E4%B8%83%E7%AB%A0%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE%E7%A8%8B/">第七章第二节课程</a>
-    </h1>
   
 
-        
-        <a href="/2019/10/24/%E7%AC%AC%E4%B8%83%E7%AB%A0%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2019-10-24T10:19:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>/*<br> Navicat Premium Data Transfer</p>
-<p> Source Server         : 虚拟机55.4-测试<br> Source Server Type    : MySQL<br> Source Server Version : 50646<br> Source Host           : 10.211.55.4:3306<br> Source Schema         : clazzz</p>
-<p> Target Server Type    : MySQL<br> Target Server Version : 50646<br> File Encoding         : 65001</p>
-<p> Date: 23/10/2019 09:34:43<br>*/</p>
-<p>SET NAMES utf8mb4;<br>SET FOREIGN_KEY_CHECKS = 0;</p>
-<hr>
-<p>– Table structure for score</p>
-<hr>
-<p>DROP TABLE IF EXISTS <code>score</code>;<br>CREATE TABLE <code>score</code> (<br>  <code>id</code> int(11) NOT NULL AUTO_INCREMENT,<br>  <code>NAME</code> varchar(20) DEFAULT NULL,<br>  <code>SUBJECT</code> varchar(20) DEFAULT NULL,<br>  <code>score</code> int(11) DEFAULT NULL,<br>  PRIMARY KEY (<code>id</code>)<br>) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;</p>
-<hr>
-<p>– Records of score</p>
-<hr>
-<p>BEGIN;<br>INSERT INTO <code>score</code> VALUES (1, ‘张三’, ‘语文’, 81);<br>INSERT INTO <code>score</code> VALUES (2, ‘张三’, ‘数学’, 75);<br>INSERT INTO <code>score</code> VALUES (3, ‘李四’, ‘语文’, 76);<br>INSERT INTO <code>score</code> VALUES (4, ‘李四’, ‘数学’, 90);<br>INSERT INTO <code>score</code> VALUES (5, ‘王五’, ‘语文’, 81);<br>INSERT INTO <code>score</code> VALUES (6, ‘王五’, ‘数学’, 100);<br>INSERT INTO <code>score</code> VALUES (7, ‘王五 ‘, ‘英语’, 90);<br>COMMIT;</p>
-<p>SET FOREIGN_KEY_CHECKS = 1;</p>
-<p>– 用一条 SQL 语句查询出每门课都大于 80 分的学生姓名<br>– 难点：每门课的分数 – 解决方案：把分数少于80分的进行排除</p>
-<p>– not in 字段<br>SELECT *<br>FROM score<br>WHERE NAME NOT IN (SELECT  NAME FROM score WHERE score&lt;=80)</p>
-<p>– not exists 字段<br>SELECT *<br>FROM score a<br>WHERE NOT EXISTS (SELECT * FROM score b WHERE a.name = b.name AND b.score &lt; 80) ;</p>
-<p>– all()方法<br>SELECT *<br>FROM score a<br>WHERE 80 &lt; ALL(SELECT score FROM score WHERE a.name = NAME );</p>
-<p>– any()方法<br>SELECT *<br>FROM score a<br>WHERE 80 &lt; any(SELECT score FROM score WHERE a.name = NAME );</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/24/%E7%AC%AC%E4%B8%83%E7%AB%A0%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE%E7%A8%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-分组查询" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/21/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/">分组查询</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/21/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/" class="archive-article-date">
-  	<time datetime="2019-10-21T07:11:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>所有同学的年龄总和<br>SELECT SUM(age) from s_stu;<br>所有男生的平均年龄<br>SELECT AVG(age) from s_stu where sex = ‘男’;<br>所有女生中年龄最小的多大<br>SELECT MIN(age) from s_stu where sex = ‘女’;<br>所有女生中年龄最大的多大<br>SELECT max(age) from s_stu WHERE sex = ‘女’<br>男生的数量<br>SELECT count(1) from s_stu WHERE sex = ‘男’;<br>查询男生和女生的总数<br>SELECT count(*),sex FROM s_stu group by sex;<br>查询每个年龄段的人数<br>SELECT count(1),age from s_stu group by age;<br>查询男生和女生中最小的年龄<br>SELECT min(age) from s_stu group by sex;<br>查询男生和女生的年龄大于15的人数，只保留人数大于3的；<br>SELECT<br>    count(1),<br>    sex<br>FROM<br>    s_stu<br>WHERE<br>    age &gt; 15<br>GROUP BY<br>    sex<br>HAVING<br>    count(1) &gt;= 3;</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/21/%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-数据库的查询与排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%9F%A5%E8%AF%A2%E4%B8%8E%E6%8E%92%E5%BA%8F/">数据库的查询与排序</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%9F%A5%E8%AF%A2%E4%B8%8E%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2019-10-21T06:52:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>查询所有人的所有信息<br>（* 代表所有字段）<br>SELECT id,stuno,name,nation from stuinfo;<br>SELECT * from stuinfo;<br>查询年龄大于1000的同学姓名和年龄；<br>SELECT name 姓名,age 年龄,nation 民族 from stuinfo where age &gt; 1000;<br>查询年龄大于1000的同学姓名，并且把重复信息合并<br>SELECT DISTINCT name 姓名 from stuinfo where age &gt; 1000;<br>查询所有人的学号和姓名,只显示第50页的数据，每页5条<br>SELECT stuno,name from stuinfo LIMIT 0,5;<br>查询所有学员信息，按照年龄升序排序<br>SELECT * from stuinfo order by age asc;<br>查询名字是两个字，按照年龄降序排列<br>SELECT * from stuinfo WHERE name LIKE ‘__’ order by age DESC;<br>按照民族进行排序<br>SELECT * from stuinfo order by nation DESC;</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%9F%A5%E8%AF%A2%E4%B8%8E%E6%8E%92%E5%BA%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-数据库的增删改" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9/">数据库的增删改</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9/" class="archive-article-date">
-  	<time datetime="2019-10-21T06:45:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#增加：<br>INSERT INTO 表名 (字段1,字段2,字段3,字段4) VALUES (值1，值2，值3,值4) ;<br>删除：<br>DELETE FROM 表名 WHERE 条件字段=值;<br>修改：<br>UPDATE 表名 SET 要更新的字段=值 WHERE 条件字段=值;</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MySQL数据管理与应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/18/MySQL%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/">MySQL数据管理与应用</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/18/MySQL%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2019-10-18T06:58:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="这是MySQL数据管理与应用的内容"><a href="#这是MySQL数据管理与应用的内容" class="headerlink" title="这是MySQL数据管理与应用的内容"></a>这是MySQL数据管理与应用的内容</h1>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/18/MySQL%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/18/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-18T06:31:19.001Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/18/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -769,8 +323,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
